@@ -25,6 +25,11 @@ oc login https://openshift.rally.redhat.com:8443 --insecure-skip-tls-verify=true
 git clone https://github.com/santiagoangel/rally-scripts
 oc new-project rally
 oc apply -f rally-scripts/application.yaml -n rally
+
+###
+YARN_ENABLED=true
+
+###
 oc new-project quarkus --description='Sample Quarkus App' --display-name='Sample Quarkus App'
 oc new-build quay.io/quarkus/ubi-quarkus-native-s2i:19.1.1~https://github.com/santiagoangel/quarkus-quickstarts.git --context-dir=getting-started --name=quarkus-quickstart
 oc new-app quarkus-quickstart
