@@ -20,7 +20,7 @@ systemctl restart dnsmasq
 
 ###
 
-oc login https://openshift.rally.redhat.com:8443 --insecure-skyp-tls-verify=true
+oc login https://openshift.rally.redhat.com:8443 --insecure-skip-tls-verify=true
 
 git clone https://github.com/santiagoangel/rally-scripts
 oc new-project rally
